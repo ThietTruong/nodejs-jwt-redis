@@ -1,0 +1,42 @@
+GET http://localhost:3000
+
+###
+GET http://localhost:3000/api-v1/user
+
+###
+POST http://localhost:3000/api-v1/user
+Content-Type: application/json
+
+{
+  "email":"thiettruong1gmail.com",
+  "password": "thietruong"
+}
+###
+POST http://localhost:3000/api-v1/user/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGRkYThhYjE3MTM3NDg1NDU3MzY1ZmYiLCJpYXQiOjE2OTMwNDY5NDF9.Y4mAx8L-0Wy43sZfnJFJ_6wRKszOKS0dPuIXZV3O_XI"
+}
+###
+POST http://localhost:3000/api-v1/user/login
+Content-Type: application/json
+
+{
+  "email":"thiettruong1@gmail.com",
+  "password": "thietruong"
+}
+###
+DELETE  http://localhost:3000/api-v1/user/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGRkYThhYjE3MTM3NDg1NDU3MzY1ZmYiLCJpYXQiOjE2OTMxOTQ3MjB9.erdhnIOCIy0Jehu1DDkPiqeGaUYjKtwIu2UJ9Z3mZYM"
+}
+
+###
+GET http://localhost:3000/api-v1
+
+###
+GET http://localhost:3000/api-v1/user/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGRkYThhYjE3MTM3NDg1NDU3MzY1ZmYiLCJpYXQiOjE2OTI1NTg4MjMsImV4cCI6MTcyNDExNjQyM30.ULiVUH0E6Wu6cBKlrNkac0q5qt1QTzSXAkHu51z6e6Q
